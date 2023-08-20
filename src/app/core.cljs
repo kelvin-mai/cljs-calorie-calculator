@@ -1,8 +1,6 @@
 (ns app.core
-  (:require [reagent.dom :as rdom]))
-
-(defn app []
-  [:div "hello world"])
+  (:require [reagent.dom :as rdom]
+            [app.app :refer [app]]))
 
 (defn ^:dev/after-load reload []
   (rdom/render [app]
